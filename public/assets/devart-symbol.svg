@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="269 221 720 594" fill="#000000" role="img" aria-labelledby="title desc">
+  <title id="title">Devart symbol</title>
+  <desc id="desc">Three geometric shapes forming an abstract upward-pointing mark, without lettering.</desc>
+  <path id="center" d="M505 408 L601 248 C612 229 641 229 653 248 L749 408 L627 670 Z"/>
+  <path id="left" d="M482 450 L537 584 L430 774 C420 791 402 802 381 802 L304 802 C285 802 275 788 285 771 Z"/>
+  <path id="right" d="M773 450 L973 771 C983 788 975 802 955 802 L874 802 C853 802 835 791 825 774 L717 584 Z"/>
+</svg>
+

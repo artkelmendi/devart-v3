@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T16:05:23.495Z",
+  "title": "Design System: Devart",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "role": "primary",
+        "displayName": "Light Blue Signal"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-black Ink"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Gray"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divider Gray"
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Pale Service Surface"
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus Blue"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero Display",
+        "purpose": "Uppercase hero heading; responsive overrides live in src/style.css."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Work and expertise section headings."
+      },
+      "title": {
+        "displayName": "Project Title",
+        "purpose": "Names below project previews."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Hero, service and about prose."
+      },
+      "label": {
+        "displayName": "Interface Label",
+        "purpose": "Navigation, action labels and tags."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared easing for transforms and entrances."
+      },
+      {
+        "name": "heading-reveal",
+        "value": "850ms",
+        "purpose": "Masked heading entrances."
+      },
+      {
+        "name": "content-reveal",
+        "value": "700ms",
+        "purpose": "Content opacity and translation entrances."
+      },
+      {
+        "name": "code-change",
+        "value": "350ms",
+        "purpose": "Code example entrance."
+      },
+      {
+        "name": "service-open",
+        "value": "400ms",
+        "purpose": "Disclosure body entrance."
+      },
+      {
+        "name": "project-image",
+        "value": "1s",
+        "purpose": "Screenshot hover scale."
+      },
+      {
+        "name": "symbol-float",
+        "value": "7s",
+        "purpose": "Ambient Devart symbol loop."
+      },
+      {
+        "name": "code-drift",
+        "value": "16s",
+        "purpose": "Decorative code background loop."
+      },
+      {
+        "name": "signal",
+        "value": "5s",
+        "purpose": "Signal path loop."
+      },
+      {
+        "name": "marquee",
+        "value": "45s",
+        "purpose": "Slow horizontal marquee."
+      },
+      {
+        "name": "scroll-ring",
+        "value": "18s",
+        "purpose": "Rotating scroll label."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "large-screen-min",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "760px"
+      },
+      {
+        "name": "phone-max",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Contact Button",
+      "kind": "button",
+      "refersTo": "contact-button",
+      "description": "Primary email action, black at rest and blue on hover.",
+      "html": "<a class=\"ds-contact\" href=\"mailto:akelmendi029@gmail.com\">START A CONVERSATION <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-contact{display:inline-flex;align-items:center;justify-content:center;gap:35px;background:var(--ink,#111);color:var(--white,#fff);border-radius:99px;padding:23px 30px;font-family:var(--mono,'Space Mono',monospace);font-size:11px;text-decoration:none;transition:transform .5s var(--ease,cubic-bezier(.16,1,.3,1)),background .3s,color .3s}.ds-contact:hover{transform:scale(1.03);background:var(--blue,#9cdef4);color:var(--ink,#111)}.ds-contact:focus-visible{outline:2px solid #087495;outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-contact{transition:none}}"
+    },
+    {
+      "name": "Work Arrow",
+      "kind": "button",
+      "refersTo": "work-arrow",
+      "description": "Small blue object beside the work link.",
+      "html": "<a class=\"ds-work\" href=\"#work\">EXPLORE MY WORK<span class=\"ds-work-arrow\"><svg viewBox=\"0 0 24 24\" width=\"19\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 4v16m-7-7 7 7 7-7\"/></svg></span></a>",
+      "css": ".ds-work{display:inline-flex;align-items:center;gap:25px;color:var(--ink,#111);font-family:var(--mono,'Space Mono',monospace);font-size:11px;text-decoration:none}.ds-work-arrow{width:38px;height:38px;display:grid;place-items:center;background:var(--blue,#9cdef4);transition:border-radius .4s,transform .4s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-work:hover .ds-work-arrow{border-radius:50%;transform:translateY(3px)}.ds-work:focus-visible{outline:2px solid #087495;outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-work-arrow{transition:none}}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "White pill with current-section blue fill; fixed positioning belongs to page layout.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#work\" aria-current=\"location\">Work</a><a href=\"#expertise\">Expertise</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav{display:inline-flex;gap:3px;padding:5px;border:1px solid var(--line,#d9dcdf);border-radius:99px;background:var(--white,#fff)}.ds-nav a{font-family:var(--mono,'Space Mono',monospace);font-size:11px;color:var(--ink,#111);padding:9px 17px;border-radius:99px;text-decoration:none;transition:background .3s,color .3s}.ds-nav a:hover{background:#eee}.ds-nav a[aria-current]{background:var(--blue,#9cdef4);color:var(--ink,#111)}.ds-nav a:focus-visible{outline:2px solid #087495;outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
+    },
+    {
+      "name": "Service Tags",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Static outlined descriptors, not interactive filters.",
+      "html": "<div class=\"ds-tags\"><span>WEBSITES</span><span>WEB APPS</span><span>THOUGHTFUL INTERACTIONS</span></div>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--mono,'Space Mono',monospace);font-size:11px;line-height:1.7;color:var(--muted,#5e6266)}.ds-tags span{border:1px solid #cbd1d5;border-radius:99px;padding:5px 11px}"
+    },
+    {
+      "name": "Code Console",
+      "kind": "card",
+      "refersTo": "code-console",
+      "description": "Illustrative source framed by a filename and example selectors; preview shows a static selected state.",
+      "html": "<div class=\"ds-console\"><div class=\"ds-console-header\"><span class=\"ds-light\"></span><span>systems.ts</span></div><pre class=\"ds-code\">// Make the pieces work together.\nconst system = connect({\n  input: yourIdea,\n  output: somethingUseful\n});</pre><div class=\"ds-tabs\" role=\"group\" aria-label=\"Code examples\"><button type=\"button\" aria-pressed=\"false\">embedded.cpp</button><button type=\"button\" aria-pressed=\"true\">systems.ts</button><button type=\"button\" aria-pressed=\"false\">web.tsx</button></div></div>",
+      "css": ".ds-console{background:var(--white,#fff);color:var(--ink,#111);border:1px solid var(--line,#d9dcdf);position:relative}.ds-console-header{display:flex;align-items:center;gap:8px;padding:12px 15px;font-family:var(--mono,'Space Mono',monospace);font-size:11px;border-bottom:1px solid var(--line,#d9dcdf);color:#62676b}.ds-light{width:7px;height:7px;background:var(--blue,#9cdef4)}.ds-code{min-height:163px;margin:0;padding:20px;font:12px/1.85 var(--mono,'Space Mono',monospace);white-space:pre-wrap;overflow-wrap:anywhere}.ds-tabs{display:flex;border-top:1px solid var(--line,#d9dcdf)}.ds-tabs button{padding:12px 8px;flex:1;background:transparent;border:0;cursor:pointer;color:inherit;font-family:var(--mono,'Space Mono',monospace);font-size:11px;transition:background .25s}.ds-tabs button:hover{background:#f0f2f3}.ds-tabs button[aria-pressed=true]{background:var(--blue,#9cdef4)}.ds-tabs button:focus-visible{outline:2px solid #087495;outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-tabs button{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engineer’s Working Portfolio",
+    "overview": "Mostly white, sharply framed and visibly technical. Squared display lettering, monospaced copy, real website previews and decorative code express the engineer’s work without overpowering it.\n\nMotion carries this language through heading reveals, small interactive transformations and slow ambient loops. The original Devart symbol retains its supplied geometry.",
+    "keyCharacteristics": [
+      "White surfaces and near-black type.",
+      "Small light-blue signals and controls.",
+      "Robotic headlines, monospaced interface text and code.",
+      "Sharp frames, pill controls and responsive motion."
+    ],
+    "rules": [
+      {
+        "name": "The Small Signal Rule",
+        "body": "Keep blue on small objects and controls; retain white as the dominant surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Use Chakra Petch for expressive headings and Space Mono for reading, code and controls.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do keep the interface predominantly white with small blue signals.",
+      "Do preserve the supplied Devart symbol geometry and use real project previews.",
+      "Do retain keyboard focus, native disclosure behavior and both motion controls."
+    ],
+    "donts": [
+      "Don't replace the technical font pairing with plain sans-serif typography.",
+      "Don't expand blue accents into dominant section backgrounds.",
+      "Don't make content visibility depend on an animation completing."
+    ]
+  }
+}

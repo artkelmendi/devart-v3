@@ -1,0 +1,18 @@
+{
+  "name": "devart-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "node scripts/check.mjs",
+    "check:thought": "node scripts/check-thought.mjs",
+    "check:hero": "node scripts/check-hero.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "vite": "^7.2.2"
+  }
+}
